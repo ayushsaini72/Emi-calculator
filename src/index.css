@@ -1,0 +1,270 @@
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --fs-pageTitle: 2rem;
+    --fs-logoText: 3rem;
+    --fs-loanHeaderText: 1.8rem;
+    --fs-btn: 2rem;
+    --fs-emiValue: 2.5rem;
+    --fs-currency-dropdown: 1.4rem;
+
+    --ls-pageTitle: 0.1rem;
+}
+
+body {
+    background: #0F0F0F;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header-Section */
+
+.header-section {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #35BE6C;
+    padding: 0 80px;
+    box-shadow: 0px 6px 4px rgba(53, 190, 108, 0.25);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-pic {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: var(--fs-logoText);
+}
+
+.pageTitle {
+    font-size: var(--fs-pageTitle);
+    letter-spacing: var(--ls-pageTitle);
+}
+
+/* Main-Section */
+
+.main-section {
+    display: flex;
+    background: #35BE6C;
+    height: 70vh;
+    margin: 80px;
+    box-shadow: inset 10px 10px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.loan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 80%;
+    width: 40%;
+    background: #0F0F0F;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: var(--fs-loanHeaderText);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    font-size: var(--fs-loanHeaderText);
+    padding: 0 10px;
+    outline: none;
+}
+
+.currency-dropdown {
+    height: 25px;
+    font-size: var(--fs-currency-dropdown);
+    font-weight: 700;
+}
+
+.loan-results {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background: #0F0F0F;
+    height: 80%;
+    width: 40%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.loan-results h1, .loan-results h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: var(--fs-loanHeaderText);
+    gap: 5px;
+}
+
+.loan-results span {
+    font-size: var(--fs-loanHeaderText);
+    font-weight: 300;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.emi-value {
+    font-size: var(--fs-emiValue) !important;
+    font-weight: 600 !important;
+    color: #35BE6C;
+}
+
+.submit-btn {
+    width: 30%;
+    height: 40px;
+    margin: 0 auto;
+    font-size: var(--fs-btn);
+    font-weight: 600;
+    background: #35BE6C;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.submit-btn:hover {
+    transform: scale(0.9);
+}
+
+.submit-btn:active {
+    color:  #0dbd53;
+    background-color: white;
+}
+
+.submit-btn:focus {
+    color:  #0dbd53;
+    background-color: white;
+}
+
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --fs-pageTitle: 1.8rem;
+        --fs-logoText: 2.8rem;
+        --fs-loanHeaderText: 1.6rem;
+        --fs-btn: 1.8rem;
+        --fs-emiValue: 2.3rem;
+        --fs-currency-dropdown: 1.2rem;
+    
+        --ls-pageTitle: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main-section {
+        flex-direction: column;
+        height: fit-content;
+        padding: 30px 0;
+        gap: 20px;
+    }
+
+    .loan, .loan-results{
+        height: 350px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --fs-pageTitle: 1.6rem;
+        --fs-logoText: 2.6rem;
+        --fs-loanHeaderText: 1.4rem;
+        --fs-btn: 1.6rem;
+        --fs-emiValue: 2rem;
+        --fs-currency-dropdown: 1rem;
+    
+        --ls-pageTitle: 0.1rem;
+    }
+
+    .submit-btn {
+        width: 100px
+    }
+
+    .main-section {
+        margin: 60px;
+    }
+
+    .header-section {
+        padding: 0 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --fs-pageTitle: 1.2rem;
+        --fs-logoText: 2.2rem;
+    }
+
+    .main-section {
+        margin: 30px;
+    }
+
+    .header-section {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --fs-pageTitle: 1.2rem;
+        --fs-logoText: 2rem;
+        --fs-loanHeaderText: 1.2rem;
+        --fs-btn: 1.6rem;
+        --fs-emiValue: 2rem;
+        --fs-currency-dropdown: 1rem;
+    
+        --ls-pageTitle: 0.1rem;
+    }
+
+    .main-section {
+        margin: 30px;
+    }
+
+    .header-section {
+        padding: 0 30px;
+    }
+
+    .loan {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .loan-results {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
